@@ -44,54 +44,14 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Section Styles */
-section {
-    padding: 20px;
-    margin: 20px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-
-.project {
-    margin-bottom: 20px;
-}
-
-.project h3 {
-    font-size: 1.5rem;
-}
-
-.project p {
-    margin: 10px 0;
-}
-
-/* Footer Styles */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
-
-footer p {
-    margin: 0;
-}
-
-
 /* Profile Container */
 .profile-container {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    text-align: center; /* Ensures text is centered on small screens */
 }
 
 .profile-picture {
@@ -104,6 +64,7 @@ footer p {
 
 .profile-info {
     text-align: left;
+    margin-top: 10px;
 }
 
 .profile-info h1 {
@@ -116,6 +77,44 @@ footer p {
     font-size: 1.2rem;
 }
 
+/* About Me Section */
+#about {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about-text {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.about-text:first-letter {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #282828;
+}
+
+.about-text:last-of-type {
+    margin-bottom: 0;
+}
 
 /* Projects Section */
 .projects-container {
@@ -170,59 +169,6 @@ footer p {
     background-color: #0056b3;
 }
 
-/* About Me Section */
-#about {
-    background-color: #f9f9f9;
-    padding: 40px 20px;
-    margin: 20px 0;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.about-container {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: left;
-}
-
-#about h2 {
-    font-size: 2.5rem;
-    color: #333;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.about-text {
-    font-size: 1.1rem;
-    color: #555;
-    line-height: 1.8;
-    margin-bottom: 15px;
-}
-
-.about-text:first-letter {
-    font-size: 1.4rem;
-    font-weight: bold;
-    color: #282828;
-}
-
-.about-text:last-of-type {
-    margin-bottom: 0;
-}
-
-@media (max-width: 768px) {
-    #about {
-        padding: 20px 10px;
-    }
-
-    #about h2 {
-        font-size: 2rem;
-    }
-
-    .about-text {
-        font-size: 1rem;
-    }
-}
-
 /* Contact Section */
 #contact {
     background-color: #333;
@@ -270,7 +216,49 @@ footer p {
     color: #ffcc00;
 }
 
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Media Queries for Mobile Devices */
 @media (max-width: 768px) {
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .profile-container {
+        flex-direction: column;
+    }
+
+    .profile-info {
+        text-align: center;
+    }
+
+    #about h2 {
+        font-size: 2rem;
+    }
+
+    .about-text {
+        font-size: 1rem;
+    }
+
+    .project-card {
+        width: calc(100% - 40px);
+        margin: 10px auto;
+    }
+
     #contact h2 {
         font-size: 2rem;
     }
